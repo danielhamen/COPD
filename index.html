@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>COPD Research Project</title>
+
+		<link rel="stylesheet" href="style.css">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+		<script type="text/javascript" src="script.js"></script>
+
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function (){
+				$("#table-of-contents-overview-item").click(function (){
+					setSelectedTableOfContentsItem("overview-title");
+					$('html, body').animate({
+						scrollTop: $("#overview-title").offset().top - 100
+					}, 100);
+				});
+				$("#table-of-contents-causes-item").click(function (){
+					setSelectedTableOfContentsItem("causes-title");
+					$('html, body').animate({
+						scrollTop: $("#causes-title").offset().top - 100
+					}, 100);
+				});
+				$("#table-of-contents-symptoms-item").click(function (){
+					setSelectedTableOfContentsItem("symptoms-title");
+					$('html, body').animate({
+						scrollTop: $("#symptoms-title").offset().top - 100
+					}, 100);
+				});
+				$("#table-of-contents-treatment-item").click(function (){
+					setSelectedTableOfContentsItem("treatment-title");
+					$('html, body').animate({
+						scrollTop: $("#treatment-title").offset().top - 100
+					}, 100);
+				});
+				$("#table-of-contents-prevention-item").click(function (){
+					setSelectedTableOfContentsItem("prevention-title");
+					$('html, body').animate({
+						scrollTop: $("#prevention-title").offset().top - 100
+					}, 100);
+				});
+				$("#table-of-contents-works-cited-item").click(function (){
+					setSelectedTableOfContentsItem("citation-title");
+					$('html, body').animate({
+						scrollTop: $("#citation-title").offset().top - 100
+					}, 100);
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<div class="body">
+			<div class="nav-bar" style="display: flex;justify-content: space-around;align-items: center;">
+				<p style="font-size: 1.3em;font-weight: 400;">
+					Chronic Obstructive Pulmonary Disease (COPD)
+				</p>
+			</div>
+			<div class="title-content">
+				<div class="titles">
+					<h1 id="title">
+						Chronic Obstructive Pulmonary Disease (COPD):
+					</h1>
+					<p id="sub-title">
+						A Research Project by <a href="javascript:void(0)">Daniel Hamen</a>
+					</p>
+				</div>
+			</div>
+			<div class="three-facts">
+				<div class="fact">
+					<p class="fact-title">Deaths (2019)</p>
+					<div class="fact-sep" style="background-color: var(--citation-text) !important;width: 6.3em;"></div>
+					<p class="fact-value">
+						3.23M
+					</p>
+					<p style="font-size: 0.8em;margin: 0;margin-top: 0.5em;">
+						<a href="#" style="color: var(--citation-text) !important;border-bottom: 0 !important;">(<i>Chronic Obstructive Pulmonary Diseas...</i></a>
+					</p>
+				</div>
+				<div class="fact">
+					<p class="fact-title">Recovery Rate</p>
+					<div class="fact-sep" style="background-color: var(--citation-text) !important;width: 6.5em;"></div>
+					<p class="fact-value">
+						40% - 70%
+					</p>
+					<p style="font-size: 0.8em;margin: 0;margin-top: 0.5em;">
+						<a href="#" style="color: var(--citation-text) !important;border-bottom: 0 !important;">(<i>Cunha, n.d.)</i></a>
+					</p>
+				</div>
+				<div class="fact">
+					<p class="fact-title">Life Expectancy</p>
+					<div class="fact-sep" style="background-color: var(--citation-text) !important;width: 7em;"></div>
+					<p class="fact-value">
+						~2 - 5 Years
+					</p>
+					<p style="font-size: 0.8em;margin: 0;margin-top: 0.5em;">
+						<a href="#" style="color: var(--citation-text) !important;border-bottom: 0 !important;">(<i>Smoking and COPD | Overviews of...</i></a>
+					</p>
+				</div>
+			</div>
+			<div class="table-of-contents-container">
+				<div class="table-of-contents" id="table-of-contents">
+					<a href="javascript:void(0)" id="table-of-contents-titles-a" onclick="toggleTableOfContents()">
+						<div class="table-of-contents-titles">
+							<h1 id="table-of-contents-title">
+								Table of Contents:
+							</h1>
+							<a href="javascript:void(0)" id="toggle-table-of-contents" onclick="toggleTableOfContents()">
+								<span class="material-symbols-outlined" id="toggle-table-of-contents-icon">
+									expand_more
+								</span>
+							</a>
+						</div>
+					</a>
+					<div class="table-of-contents-items" id="table-of-contents-items">
+						<div class="table-of-contents-item">
+							<p class="table-of-contents-item-label selected-table-of-contents-item" id="table-of-contents-overview-item">
+								Overview
+							</p>
+						</div>
+						<div class="table-of-contents-item" id="table-of-contents-causes-item">
+							<p class="table-of-contents-item-label">
+								Causes
+							</p>
+						</div>
+						<div class="table-of-contents-item" id="table-of-contents-symptoms-item">
+							<p class="table-of-contents-item-label">
+								Symptoms
+							</p>
+						</div>
+						<div class="table-of-contents-item" id="table-of-contents-treatment-item">
+							<p class="table-of-contents-item-label">
+								Treatment
+							</p>
+						</div>
+						<div class="table-of-contents-item" id="table-of-contents-prevention-item">
+							<p class="table-of-contents-item-label">
+								Prevention
+							</p>
+						</div>
+						<div class="table-of-contents-item" id="table-of-contents-works-cited-item">
+							<p class="table-of-contents-item-label">
+								Works Cited
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home-page-section overview" style="padding-top: 1em;">
+				<div class="home-page-titles">
+					<h1 class="home-page-title" id="overview-title">
+						Overview:
+					</h1>
+				</div>
+				<div class="home-page-body">
+					<p class="home-page-body-paragraph">
+						Chronic Obstructive Pulmonary Disease (abbreviated to COPD). is group of Chronic Inflammatory Lung Diseases (<a href="#"><i>Smoking and COPD | Overviews of Diseases/Conditions | Tips From Former Smokers | CDC</i></a>, n.d.).
+					</p>
+					<p class="home-page-body-paragraph">
+						COPD consists of Emphysema, and Chronic long-term bronchitis, which are chronic lung diseases (<i>COPD - What Is COPD?</i>, 2022).
+					</p>
+					<p class="home-page-body-paragraph">
+						COPD causes a blockage to airflow which makes breathing difficult (<i>COPD - Symptoms and Causes, 2020</i>).
+					</p>
+					<p class="home-page-body-paragraph">
+						The disease is most common among people who smoke cigarettes or regularly use other tobacco products, but there are other factors that cause it (<i>Smoking and COPD | Overviews of Diseases/Conditions | Tips From Former Smokers | CDC</i>, n.d.).
+					</p>
+					<p class="home-page-body-paragraph">
+						COPD is a progressive chronic disease (it gets worse over time). (<i>COPD - What Is COPD?</i>, 2022).
+					</p>
+					<p class="home-page-body-paragraph">
+						It can be treated and the symptoms can be controlled (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021).
+					</p>
+				</div>
+			</div>
+			<div class="home-page-section prevention" style="background-color: var(--surface).;">
+				<div class="home-page-titles">
+					<h1 class="home-page-title" id="causes-title">
+						Causes:
+					</h1>
+				</div>
+				<div class="home-page-body">
+					<p class="home-page-body-paragraph">
+						COPD has 2 main causes (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021).
+					</p>
+					<ol class="home-page-body-paragraph">
+						<li>Smoking cigarettes or regular use of other tobacco products </li>
+						<li>Long-term exposure to lung irritants such as secondhand smoke, air pollution, and chemical fumes and dust</li>
+					</ol>
+					<p class="home-page-body-paragraph">
+						75% of COPD patients are those who smoke (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+					</p>
+					<p class="home-page-body-paragraph">
+						Although it is rare, COPD can be genetic. People who have alpha-1 antitrypsin deficiency (a genetic condition) are more likely to get the disease than those who do not (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+					</p>
+				</div>
+			</div>
+			<div class="home-page-section symptoms">
+				<div class="home-page-titles">
+					<h1 class="home-page-title" id="symptoms-title">
+						Symptoms:
+					</h1>
+				</div>
+				<div class="home-page-body">
+					<p class="home-page-body-paragraph">
+						COPD is significantly difficult to diagnose as its symptoms do not become visible until after much damage has already occurred (<i>COPD - What Is COPD?</i>, 2022)
+					</p>
+
+					<p class="home-page-body-paragraph">Symptoms may include (<i>Smoking and COPD | Overviews of Diseases/Conditions | Tips From Former Smokers | CDC</i>, n.d.):</p>
+					<ul class="home-page-body-paragraph">
+						<li>Shortness of breath during physical activities</li>
+						<li>Wheezing</li>
+						<li>Chest tightness</li>
+						<li>Excessive coughing that may expel clear, white, yellow or greenish mucus (sputum)</li>
+						<li>Recurring respiratory infections</li>
+						<li>Lack of energy</li>
+						<li>Unintended weight loss</li>
+						<li>Swelling in ankles, feet or legs</li>
+					</ul>
+					<p class="home-page-body-paragraph">
+						Episodes of exacerbations (when the symptoms become worse and worse) may become more popular in later stages. These episodes would occur everyday and will continue for several days (<i>COPD - Symptoms and Causes</i>, 2020)
+					</p>
+					<p class="home-page-body-paragraph">
+						Symptoms of COPD are also very similar to those of other lung diseases, and unless the disease is well-progressed, it can not be seen on an x-ray or CT scan which renders early diagnosis extremely difficult (<i>COPD - Diagnosis, Evaluation and Treatment</i>, n.d.)
+					</p>
+				</div>
+			</div>
+			<div class="home-page-section treatment" style="background-color: var(--surface);">
+				<div class="home-page-titles">
+					<h1 class="home-page-title" id="treatment-title">
+					Treatment:
+					</h1>
+				</div>
+				<div class="home-page-body">
+					<p class="home-page-body-paragraph">
+						Unless the disease is in its very late stages, COPD has many options for treatment (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+					</p>
+					<p class="home-page-body-paragraph">
+						Treatments may include:
+					</p>
+					<ul class="home-page-body-paragraph">
+						<li><b>Medicine</b>: (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)</li>
+						<ul>
+							<li>
+								<b>Bronchodilators</b>. Bronchodilators are muscle relaxers for your airways. They open your airways which allows oxygen in your lungs. Most bronchodilators are taken using an inhaler, but in severe cases, the inhaler may also contain steroids to reduce inflammation (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+							</li>
+							<li>
+								<b>Vaccines</b>. Flu and pneumococcal pneumonia vaccines can be used as treatments or preventions to COPD (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+							</li>
+							<li>
+								<b>Antibiotics</b>. Antibiotics do not directly treat COPD, but since people with COPD are more likely to get a bacterial or viral lung infection, antibiotics can be used to prevent, or treat active infections (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+							</li>
+						</ul>
+						<li>
+							<b>Oxygen therapy</b>. In severe cases of COPD, you may have low levels of oxygen in your blood. Oxygen therapy can make your blood oxygen levels higher (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+						</li>
+						<li>
+							<b>Pulmonary rehabilitation</b>. Pulmonary rehabilitation is a program for people with Chronic Breathing problems and conditions such as COPD. Pulmonary rehabilitation may include (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021):
+						</li>
+						<ul>
+							<li>Exercise</li>
+							<li>Disease management training</li>
+							<li>Nutritional counselling</li>
+							<li>Psychological counselling</li>
+						</ul>
+						<li><b>Surgery</b>. Surgery is a highly-risky last resort for people whose symtoms have not been responding to other treatments. COPD-related surgeries include (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021):</li>
+						<ul>
+							<li>Removal of damaged lung tissue</li>
+							<li>Removal of large air spaces (bullae) which are formed when air sacs are destroyed</li>
+							<li>For the most severe cases, a lung transplant may be carried out
+						</ul>
+					</ul>
+				</div>
+			</div>
+			<div class="home-page-section prevention">
+				<div class="home-page-titles">
+					<h1 class="home-page-title" id="prevention-title">
+						Prevention:
+					</h1>
+				</div>
+				<div class="home-page-body">
+					<p class="home-page-body-paragraph">
+						Since the cause of the disease is very clear, the prevention of COPD is also extremely clear.
+					</p>
+
+					<p class="home-page-body-paragraph">
+						For smokers who have COPD, the best option would be to Quit Smoking Immediately (<i>COPD - Symptoms and Causes</i>, 2020)
+					</p>
+
+					<p class="home-page-body-paragraph">
+						Long-term smokers may not perceive this statement as simple, but quitting is critical to the prevention of COPD.
+					</p>
+
+					<p class="home-page-body-paragraph">
+						For patients who are exposed to chemical fumes and dust, changing their environment can prevent COPD (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021)
+					</p>
+
+					<p class="home-page-body-paragraph">
+						If changing your environment is not an option, using respiratory protective equipment such as air-purifying respirators (APRs) and atmosphere-supplying respirators (ASRs) are also alternatives (<i>Types of Respiratory Protection | CDC</i>, n.d.)
+					</p>
+
+					<p class="home-page-body-paragraph">
+						General prevention methods may include (<i>COPD | Chronic Obstructive Pulmonary Disease</i>, 2021):
+					</p>
+
+					<ul class="home-page-body-paragraph">
+						<li>
+							Getting an annual flu vaccination and regular vaccination against pneumococcal pneumonia
+						</li>
+						<li>
+							Taking antidepression medications, or engaging in Psychotherapy to treating depression
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="home-page-section citation" style="background-color: var(--surface);">
+				<div class="home-page-titles">
+					<h1 class="home-page-title" id="citation-title">
+						Works Cited:
+					</h1>
+				</div>
+				<div class="home-page-body">
+					<ul>
+						<li style="line-height: 2;">
+							<i>COPD | Chronic Obstructive Pulmonary Disease.</i> (2021, October 5). MedlinePlus. Retrieved October 15, 2022, from <a href="https://medlineplus.gov/copd.html" target="_blank">https://medlineplus.gov/copd.html</a>
+						</li>
+						<li style="line-height: 2;">
+							<i>COPD - Diagnosis, Evaluation and Treatment.</i> (n.d.). RadiologyInfo.org. Retrieved October 15, 2022, from <a href="https://www.radiologyinfo.org/en/info/copd" target="_blank">https://www.radiologyinfo.org/en/info/copd</a>
+						</li>
+						<li style="line-height: 2;">
+							<i>COPD - Symptoms and causes</i>. (2020, April 15). Mayo Clinic. Retrieved October 15, 2022, from <br>&emsp;&emsp;<a href="https://www.mayoclinic.org/diseases-conditions/copd/symptoms-causes/syc-20353679" target="_blank">https://www.mayoclinic.org/diseases-conditions/copd/symptoms-causes/syc-20353679</a>
+						</li>
+						<li style="line-height: 2;">
+							<i>COPD - What Is COPD?</i> (2022, March 24). NHLBI. Retrieved October 15, 2022, from <a href="https://www.nhlbi.nih.gov/health/copd" target="_blank">https://www.nhlbi.nih.gov/health/copd</a>
+						</li>
+						<li>
+							<i>Smoking and COPD | Overviews of Diseases/Conditions | Tips From Former Smokers | CDC.</i> (n.d.). Centers for Disease Control and Prevention. Retrieved<br>&emsp;&emsp;October 15, 2022, from <a href="https://www.cdc.gov/tobacco/campaign/tips/diseases/copd.html" target="_blank">https://www.cdc.gov/tobacco/campaign/tips/diseases/copd.html</a>
+						</li>
+						<li>
+							Types of Respiratory Protection | CDC. (n.d.). Centers for Disease Control and Prevention. Retrieved October 15, 2022,<br>&emsp;&emsp;from <a href="https://www.cdc.gov/coronavirus/2019-ncov/hcp/elastomeric-respirators-strategy/respiratory-protection.html" target="_blank">https://www.cdc.gov/coronavirus/2019-ncov/hcp/elastomeric-respirators-strategy/respiratory-protection.html</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
